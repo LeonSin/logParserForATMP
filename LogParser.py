@@ -1,8 +1,21 @@
 # -*- coding: utf-8 -*-
+import os
+import re
 
-with open('C:\Users\lenovo\Desktop\logFile\POS_FEP_2014-09-26.log.1', 'rb') as f:
-    serialNo = 'fIcjMlq1yN9e'
-    for line in f.readlines():
-        if serialNo in line:
-            print line
+def parseTxSerialNo(line):
+    #'^([?P<level>\w+]) (?P<date>\d+)
+    m = re.match(r"channelID:[?P(<channelID>\w+_\w+)]", line)
+    if m:
+        print '1'\
+            #m.group("channelID")
+
+logDir = 'C:\Users\lenovo\Desktop\logFile\\'
+
+logFileList = os.listdir(logDir)
+
+for logFile in logFileList:
+    print logDir + logFile
+    with open(logDir + logFile, 'rb') as f:
+        for line in f.readlines():
+            parseTxSerialNo(line)
 
