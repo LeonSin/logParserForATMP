@@ -14,8 +14,9 @@ logDir = 'C:\Users\lenovo\Desktop\logFile\\'
 logFileList = os.listdir(logDir)
 
 for logFile in logFileList:
-    print logDir + logFile
-    with open(logDir + logFile, 'rb') as f:
+    logQualifiedName = logDir + logFile
+    print logQualifiedName
+    with open(logQualifiedName, 'rb') as f:
         for line in f.readlines():
             parseTxSerialNo(line)
 
