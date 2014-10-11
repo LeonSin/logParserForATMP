@@ -14,3 +14,4 @@
 * MQ队列  BEP2TXE / TXE2BEP XML报文解析
 
 ######TXE
+* Error message
