@@ -15,3 +15,5 @@
 
 ######TXE
 * Error message
+* workflow of the transation
+* ESR service ERROR message
