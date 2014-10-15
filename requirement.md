@@ -17,3 +17,11 @@
 * Error message
 * workflow of the transation
 * ESR service ERROR message
+
+
+###### memo
+1. data display using web application
+2. Which web framework to choose
+Django vs Flask vs Pyramid
+3. Full Text Search Engine
+Need No-SQL components?
