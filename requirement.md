@@ -25,3 +25,4 @@
 Django vs Flask vs Pyramid
 3. Full Text Search Engine
 Need No-SQL components?
+4. static code analysis within Eclipse plugin mapping the workflow xml file?
