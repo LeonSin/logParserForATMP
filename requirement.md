@@ -26,6 +26,9 @@ Django vs Flask vs Pyramid
 3. Full Text Search Engine
 Need No-SQL components?
 4. static code analysis within Eclipse plugin mapping the workflow xml file?
+5. data visualizations in browser using D3,js, a Javascript library.
+
+
 
 ###### ATMP自动化测试系统设计
 作用：比较ATMP系统单个组件代码修改后，持续集成测试
