@@ -38,3 +38,17 @@ Need No-SQL components?
 2. 系统末端的输入/输出在一次更新后的对比（报文对比监控）
 模式：
 Note: CI（Continuous Integration）Jenkins / Husdon
+
+###### 单元测试
+基于基本功能点的重构，形成函数，以函数为粒度进行单元测试，然后对整个process()进行功能测试
+Instance.java
+process(){
+	func1()
+	func2()
+	func3()
+}
+
+InstanceTest.java
+testFunc1()
+testFunc2()
+testFunc3()
