@@ -10,6 +10,11 @@ def parseTxSerialNo(line):
         print m.group("channelID") + " " + m.group("txCode")
 
 
+def parsePacketMessageField(line):
+    for index in range(128):
+        m = re.search(r'Unpack field\[' + str(index).zfill(3) + ':\s+\]=\[len=\d+\]<(?P<message>\w+)>', line)
+        if m:
+            print "field[" + str(index).zfill(3) + "]=" + m.group("message")
 
 logDir = 'C:\Users\lenovo\Desktop\logFile\\'
 
@@ -21,4 +26,5 @@ for logFile in logFileList:
     with open(logQualifiedName, 'rb') as f:
         for line in f.readlines():
             parseTxSerialNo(line)
+            parsePacketMessageField(line)
 

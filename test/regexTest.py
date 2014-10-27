@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
 
-c = re.compile(r'channelID')
-m = c.match(r'channelID', '[DEBUG ] 0926 21:49:21.865[FEP][fIdLegKIMsFB] POS_FEP:48||channelID:[POS_VM] txCode:[P_ADJ0]')
-
+m1 = re.search(r'Unpack field\[000:\s+\]=\[len=\d+\]', '[INFO] 0926 21:49:27.170[FEP][fIhxlhhywpYC] POS_FEP:52||Unpack field[000:                    ]=[len=4]<0200>')
+if m1:
+    print 'find'
