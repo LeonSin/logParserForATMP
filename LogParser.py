@@ -2,12 +2,14 @@
 import os
 import re
 
+
 def parseTxSerialNo(line):
     #'^([?P<level>\w+]) (?P<date>\d+)
-    m = re.match(r"channelID:[?P(<channelID>\w+_\w+)]", line)
+    m = re.search(r'channelID:\[(?P<channelID>\w+)\] txCode:\[(?P<txCode>\w+)\]', line)
     if m:
-        print '1'\
-            #m.group("channelID")
+        print m.group("channelID") + " " + m.group("txCode")
+
+
 
 logDir = 'C:\Users\lenovo\Desktop\logFile\\'
 
