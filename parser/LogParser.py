@@ -3,7 +3,7 @@ import os
 import re
 
 
-def parseTxSerialNo(line):
+def parseTxCode(line):
     #'^([?P<level>\w+]) (?P<date>\d+)
     m = re.search(r'channelID:\[(?P<channelID>\w+)\] txCode:\[(?P<txCode>\w+)\]', line)
     if m:
@@ -17,15 +17,23 @@ def parsePacketMessageField(line):
             print "field[" + str(index).zfill(3) + "]=" + m.group("message")
 
 
-logDir = 'C:\Users\lenovo\Desktop\logFile\\'
+def parseTxSerialNo(line):
+    match = re.search(r'The current transaction serial number:(?P<txSerialNo>\w+)', line)
+    if match:
+        print match.group("txSerialNo")
 
-logFileList = os.listdir(logDir)
 
-for logFile in logFileList:
-    logQualifiedName = logDir + logFile
-    print logQualifiedName
-    with open(logQualifiedName, 'rb') as f:
-        for line in f.readlines():
-            parseTxSerialNo(line)
-            parsePacketMessageField(line)
+if __name__ == '__main__':
+    logDir = 'C:\Users\lenovo\Desktop\logFile\\'
+
+    logFileList = os.listdir(logDir)
+
+    for logFile in logFileList:
+        logQualifiedName = logDir + logFile
+        print logQualifiedName
+        with open(logQualifiedName, 'rb') as f:
+            for line in f.readlines():
+                parseTxCode(line)
+                parsePacketMessageField(line)
+                parseTxSerialNo(line)
 
