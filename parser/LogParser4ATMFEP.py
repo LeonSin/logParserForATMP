@@ -2,19 +2,28 @@
 import os
 import re
 
+txList = []
+txListLogLine = {}
+
+
+def search_transaction(line):
+    global txList
+    match = re.search(r'Put request data into sendBlockingQueue txSerialNo=(?P<txSerialNo>\w+)', line)
+    if match:
+        txList.append(match.group("txSerialNo"))
+
 
 def parse_tx_code(line):
     #'^([?P<level>\w+]) (?P<date>\d+)
-    m = re.search(r'channelID:\[(?P<channelID>\w+)\] txCode:\[(?P<txCode>\w+)\]', line)
+    m = re.search(r'outTxCdoe=\[(?P<outTxCdoe>\w+)\] innerTxCode=\[(?P<innerTxCode>\w+)\]', line)
     if m:
-        print m.group("channelID") + " " + m.group("txCode")
+        print m.group("outTxCdoe") + " " + m.group("innerTxCode")
 
 
-def parse_packet_message_field(line):
-    for index in range(128):
-        m = re.search(r'Unpack field\[' + str(index).zfill(3) + ':\s+\]=\[len=\d+\]<(?P<message>\w+)>', line)
-        if m:
-            print "field[" + str(index).zfill(3) + "]=" + m.group("message")
+def parse_message_fep2txe(line):
+    match = re.search(r'Put response data into MQ:FEP2TXE detail:\[(?P<message>\w+)\]', line)
+    if match:
+        print match.group("message")
 
 
 def parse_tx_serial_no(line):
@@ -33,7 +42,6 @@ if __name__ == '__main__':
         print logQualifiedName
         with open(logQualifiedName, 'rb') as f:
             for line in f.readlines():
-                parse_tx_code(line)
-                parse_packet_message_field(line)
-                parse_tx_serial_no(line)
+                search_transaction(line)
 
+    print txList
