@@ -16,6 +16,7 @@ def parsePacketMessageField(line):
         if m:
             print "field[" + str(index).zfill(3) + "]=" + m.group("message")
 
+
 logDir = 'C:\Users\lenovo\Desktop\logFile\\'
 
 logFileList = os.listdir(logDir)
