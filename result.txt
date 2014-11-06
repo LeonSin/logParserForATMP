@@ -1,0 +1,15 @@
+--------result--------
+ATMP_serialNo:4Tm1rXt3gM5u_1  term serialNo:000450  fova_serialNo:021524  SSN:  
+ATMP_serialNo:JE0kKuefLtSS_1  term serialNo:000457  fova_serialNo:021525  SSN:  
+ATMP_serialNo:JEmvHXEK90eW_1  term serialNo:000459  fova_serialNo:021526  SSN:  
+ATMP_serialNo:JFvMjZw61uYa_1  term serialNo:000461  fova_serialNo:021527  SSN:  
+ATMP_serialNo:JGYfcWf3mlIG_1  term serialNo:000463  fova_serialNo:021528  SSN:292685  
+ATMP_serialNo:JQlM2N5denaf_1  term serialNo:021807  fova_serialNo:068848  SSN:292688  
+ATMP_serialNo:JR2KLAjdzEhR_1  term serialNo:021808  fova_serialNo:068849  SSN:292704  
+ATMP_serialNo:Jpx4dYIq7Bik_1  term serialNo:022237  fova_serialNo:022597  SSN:292735  
+ATMP_serialNo:JrRC30lTRxhS_1  term serialNo:022238  fova_serialNo:022598  SSN:  
+ATMP_serialNo:K5TiXd1KQjJU_1  term serialNo:022243  fova_serialNo:022599  SSN:292774  
+ATMP_serialNo:K5ne012cpTq8_1  term serialNo:022244  fova_serialNo:022600  SSN:292795  
+ATMP_serialNo:KDuoNJrWmTka_1  term serialNo:022245  fova_serialNo:022601  SSN:292796  
+ATMP_serialNo:KEkwiYNsf7rY_1  term serialNo:022246  fova_serialNo:022602  SSN:292800  
+ATMP_serialNo:KGEzuljKOwt2_1  term serialNo:022247  
